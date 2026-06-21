@@ -1,6 +1,6 @@
 # Levantamento Inicial
 
-## Funcionalidades Principais
+## Funcionalidades Principais do Sistema
 
 - Usuarios criam contas
 - Usuarios criam servidores
