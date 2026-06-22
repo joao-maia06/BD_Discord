@@ -15,11 +15,19 @@
 - Canal
 - Conversa 
 - Mensagem
+- Membro_servidor
 
 ## Possiveis Relacionamentos
 
-- 
+- Usuario cria Servidor (1:N)
+- Servidor possui Canal (1:N)
+- Usuario participa de Servidor (N:N)
+- Conversa possui Participantes (N:N)
+- Usuario envia Mensagem (1:N)
+- Canal contem Mensagem (1:N)
+- Conversa contem Mensagem (1:N)
 
 ## Observaçoes
 
-- 
+- Uma mensagem pode estar em um canal ou em uma conversa, nao pode estar nos dois ao mesmo tempo
+- Membro_servidor resolve o relaconamento Usuario participa de Servidor
