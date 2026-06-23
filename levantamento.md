@@ -8,14 +8,38 @@
 - Usuarios criam mensagen diretas com outro(s) usuario(s)
 - Usuarios enviam mensagens
 
-## Possiveis Entidades
+## Possiveis Entidades e seus Atributos
 
 - Usuario
+id_usuario
+nome_usuario
+email
+telefone
+senha
+data_criacao
+
 - Servidor
+id_servidor
+nome
+descriçao
+data_criacao
+
 - Canal
-- Conversa 
+id_canal
+nome
+tipo
+
+- Conversa
+id_conversa
+data_criaçao
+
 - Mensagem
+id_mensagem
+conteudo
+data_criaçao
+
 - Membro_servidor
+
 
 ## Possiveis Relacionamentos
 
