@@ -11,32 +11,37 @@
 ## Possiveis Entidades e seus Atributos
 
 - Usuario
-id_usuario
-nome_usuario
-email
-telefone
-senha
-data_criacao
+
+id_usuario,
+nome_usuario,
+email,
+telefone,
+senha,
+data_criacao.
 
 - Servidor
-id_servidor
-nome
-descriçao
-data_criacao
+
+id_servidor,
+nome,
+descriçao,
+data_criacao.
 
 - Canal
-id_canal
-nome
-tipo
+
+id_canal,
+nome,
+tipo.
 
 - Conversa
-id_conversa
-data_criaçao
+
+id_conversa,
+data_criaçao.
 
 - Mensagem
-id_mensagem
-conteudo
-data_criaçao
+
+id_mensagem,
+conteudo,
+data_criaçao.
 
 - Membro_servidor
 
