@@ -1,52 +1,33 @@
-# Levantamento Inicial
+# Levantamento
 
-## Funcionalidades Principais do Sistema
+## Entidades e seus Atributos
 
-- Usuarios criam contas
-- Usuarios criam servidores
-- Usuarios adicionam amigos
-- Usuarios criam mensagen diretas com outro(s) usuario(s)
-- Usuarios enviam mensagens
+- **Usuario**
 
-## Possiveis Entidades e seus Atributos
+id_usuario, nome_usuario, email, telefone, senha, data_criacao.
 
-- Usuario
+- **Servidor**
 
-id_usuario,
-nome_usuario,
-email,
-telefone,
-senha,
-data_criacao.
+id_servidor, nome, descriçao, data_criacao.
 
-- Servidor
+- **Canal**
 
-id_servidor,
-nome,
-descriçao,
-data_criacao.
+id_canal, nome, tipo.
 
-- Canal
+- **Conversa**
 
-id_canal,
-nome,
-tipo.
+id_conversa, data_criaçao.
 
-- Conversa
+- **Mensagem**
 
-id_conversa,
-data_criaçao.
+id_mensagem, conteudo, data_criaçao.
 
-- Mensagem
+## Entidades adicionais
 
-id_mensagem,
-conteudo,
-data_criaçao.
+- **Membro_servidor**
+- **Participante_conversa**
 
-- Membro_servidor
-
-
-## Possiveis Relacionamentos
+## Relacionamentos
 
 - Usuario cria Servidor (1:N)
 - Servidor possui Canal (1:N)
@@ -56,7 +37,42 @@ data_criaçao.
 - Canal contem Mensagem (1:N)
 - Conversa contem Mensagem (1:N)
 
-## Observaçoes
+## Regras de negocio
 
-- Uma mensagem pode estar em um canal ou em uma conversa, nao pode estar nos dois ao mesmo tempo
-- Membro_servidor resolve o relaconamento Usuario participa de Servidor
+### Usuário
+
+- Todo usuário deve possuir um identificador único.
+- Um usuário deve possuir e-mail ou telefone (ou ambos), mas nunca os dois nulos ao mesmo tempo.
+- Todo usuário deve possuir uma senha, ela não pode ser nula e deve possuir no mínimo 8 caracteres e no máximo 72.
+- Todo usuário deve possuir um nome, ele não pode ser nulo e deve ter no máximo 32 caracteres.
+- Um usuário pode participar de vários servidores.
+
+### Servidor
+
+- Todo servidor deve possuir um identificador único.
+- Todo servidor possui um, e apenas um, usuário proprietário.
+- Todo servidor deve possuir um nome, com no mínimo 2 e no máximo 100 caracteres.
+- Um usuário pode criar vários servidores.
+- Um servidor pode conter vários canais.
+- Um servidor pode conter vários usuários participantes.
+
+### Canal
+
+- Todo canal deve possuir um identificador único.
+- Todo canal deve possuir um nome, com no mínimo 1 e no máximo 100 caracteres.
+- Todo canal pertence a um servidor.
+- O tipo do canal deve pertencer ao conjunto {texto, voz}.
+
+### Conversa
+
+- Toda conversa deve possuir um identificador único.
+- Um usuário pode participar de varias conversas.
+- Uma conversa não pode possuir participantes repetidos.
+
+### Mensagem
+
+- Toda mensagem deve possuir um identificador único.
+- Toda mensagem deve possuir um conteúdo com no mínimo 1 e no máximo 2000 caracteres.
+- Toda mensagem deve possuir um usuário autor.
+- Um usuário pode enviar varias mensagens.
+- Uma mensagem deve pertencer a um canal ou a uma conversa, mas nunca aos dois simultaneamente.
