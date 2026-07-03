@@ -45,6 +45,7 @@ id_mensagem, conteudo, data_criaçao.
 - Um usuário deve possuir e-mail ou telefone (ou ambos), mas nunca os dois nulos ao mesmo tempo.
 - Todo usuário deve possuir uma senha, ela não pode ser nula e deve possuir no mínimo 8 caracteres e no máximo 72.
 - Todo usuário deve possuir um nome, ele não pode ser nulo e deve ter no máximo 32 caracteres.
+- O nome do usuario deve ser unico.
 - Um usuário pode participar de vários servidores.
 
 ### Servidor
