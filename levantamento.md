@@ -4,7 +4,7 @@
 
 - **Usuario**
 
-id_usuario, nome_usuario, email, telefone, senha, data_criacao.
+id_usuario, nome_usuario, email, telefone, senha, idade, status, biografia, data_criacao.
 
 - **Servidor**
 
@@ -12,7 +12,7 @@ id_servidor, nome, descriçao, data_criacao.
 
 - **Canal**
 
-id_canal, nome, tipo.
+id_canal, nome, tipo, descricao.
 
 - **Conversa**
 
@@ -20,7 +20,19 @@ id_conversa, data_criaçao.
 
 - **Mensagem**
 
-id_mensagem, conteudo, data_criaçao.
+id_mensagem, conteudo, id_mensagem_resposta, data_criaçao.
+
+- **Solicitacao_amizade**
+
+id_solicitacao, id_remetente, id_destinatario, status, data_envio
+
+- **Amizade**
+
+id_usuario_1, id_usuario_2, data_inicio
+
+- **Cargo_servidor**
+
+id_cargo, id_servidor, nome, cor, hierarquia
 
 ## Entidades adicionais
 
