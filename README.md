@@ -4,8 +4,8 @@
 Discord
 
 ## Integrantes
-- Bruno Farias Amaral
-- Joao Vitor Martins Ferreira Maia
+- Bruno Farias Amaral (202511140028)
+- Joao Vitor Martins Ferreira Maia (202511140030)
 
 ## Descriçao
 Este projeto tem como objetivo modelar um banco de dados baseado no sistema do Discord.
